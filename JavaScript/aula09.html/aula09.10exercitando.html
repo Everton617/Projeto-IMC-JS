@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando ex09 e 10</title>
+    <style>
+        div#area{
+            background: rgb(90, 100, 182);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = " area "> 
+        Click em mim
+    </div>
+    <script>
+        var a = document.querySelector('div#area')
+    a.addEventListener('click' , clicar)
+    a.addEventListener('mouseenter' , entrar)
+    a.addEventListener('mouseout' , sair )
+
+    function entrar (){
+        a.innerText = ' ENTROU! '
+    }
+    function clicar (){
+        a.innerText = ' Clickou'
+    }
+    function sair (){
+        a.innerText = ' SAIU '
+    }
+
+    </script>
+</body>
+</html>

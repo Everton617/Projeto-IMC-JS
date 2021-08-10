@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+<body>
+    <h1>Calcule o seu IMC AQUI !</h1>
+    Quanto você pesa? <input type="number" name="peso" id="peso">
+    Qual a sua altura? <input type="number" name="altura" id="altura" >
+    <input type="button" value="Verificar" onclick = "clicar()">
+    <div id = "psp">
+
+     <script>
+         function clicar(){
+        var kg = document.querySelector('input#peso')
+        var alt = document.querySelector('input#altura')
+        var psp = document.querySelector('div#psp')
+        var resul = kg/alt.value
+        n1 = kg.value
+        n2 = alt.value
+        totalp = Math.round(n1)
+        totalt = Math.round(n2)
+        resul= totalp/totalt
+        
+        if (resul< 18.5){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML = 'Você está abaixo do peso '
+        } else if ( resul >= 18.5 && resul <= 24.9){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML = 'Você está no peso normal!'        
+        }  if ( resul>=25 && peso<=29,9 ){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML = ' Você está com sobrepeso'
+        }  else if ( resul >=30 && resul <=34,9){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML = ' Você esta com Obesidade grau I'
+        } if ( resul >= 35 && result <= 39,9){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML =' Você está com Obesidade grau II'
+        } else if ( resul >= 40 ){
+            psp.innerHTML = `Seu IMC é : ${resul}  `
+            psp.innerHTML = ' Você está com Obesidade Morbida'
+        }
+    } 
+     </script>
+    </div>
+</body>
+</html>

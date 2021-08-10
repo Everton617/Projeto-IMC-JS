@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando AULA 09</title>
+    <style>
+
+        div#espaço{
+            background: blue;
+            height: 300px;
+            width: 300px;
+            line-height: 300px;
+            text-align : center;
+            
+        }
+    </style>
+</head>
+<body>
+<div id = "espaço" > NÃO CLICK AQUI !
+      
+    <script>
+        let b = document.querySelector('div#espaço')
+
+        b.addEventListener('click' , clicar)
+        b.addEventListener('mouseenter' , entrar)
+        b.addEventListener('mouseout' , sair)
+
+        function entrar (){
+            b.innerText = ' NÃO FAÇA ISSO POR FAVOR ! '
+        }
+        function clicar (){
+            b.innerText = ' AGORA É TARDE DEMAIS'
+            window.alert(' SEU COMPUTADOR FOI INFECTADO !!!!!!! ')
+        }
+        function sair (){
+            b.innerText = ' EU AVISEI !'
+            
+        }
+
+    </script>
+
+</div>
+    
+</body>
+</html>
